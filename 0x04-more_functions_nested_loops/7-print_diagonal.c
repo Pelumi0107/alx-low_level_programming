@@ -3,22 +3,24 @@
 /**
  * print_diagonal - prints diagonal line n times
  * @n: times diagonal line is printed
- * Return: no return
+ * Return: ()
  */
 
 void print_diagonal(int n)
 {
-	int i, j;
+	int x;
 
-	for (i = 0; i < n; i++)
+	if (n <= 0)
+		_putchar('\n');
+	else
 	{
-		for (j = 0; j < i; j++)
+		for (x = 0; x < n; x++)
 		{
-			_putchar('');
+			for (i = 0; i <= x; i++)
+				putchar(' ');
+			putchar(92);
+			putchar('\n');
 		}
-		_putchar(92);
-		if (i < (n - 1))
-			_putchar('\n');
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
